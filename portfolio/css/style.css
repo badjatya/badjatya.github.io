@@ -21,6 +21,10 @@ a{
     height: 100vh;
     box-sizing: border-box;
     background-color: #edf1fd;
+    background-image: url("../images/main1.png");
+    background-repeat: no-repeat;
+    background-size: 843px;
+    background-position: right ;
 }
 
 nav{
@@ -67,4 +71,41 @@ nav{
     color: #ffffff !important;
     font-weight: 700;
     transition: all ease 0.4s;
+}
+
+.name{
+    font-family: calibri;
+    width: 500px;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translate(-20%,-50%);
+}
+
+.name p:nth-child(1), .name .details {
+    color: #6c707c;
+    font-size: 16px;
+}
+
+.name h1 {
+    font-family: poopins;
+    font-size: 40px;
+    margin: 0px;
+    letter-spacing: 3px;
+    color: #292929;
+}
+
+.cv-btn{
+    width: 200px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #292929;
+    color: #ffffff;
+}
+
+.cv-btn:hover{
+    background-color: #131313;
+    transition: all ease 0.5s;
 }
