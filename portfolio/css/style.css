@@ -109,3 +109,101 @@ nav{
     background-color: #131313;
     transition: all ease 0.5s;
 }
+
+.social{
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    display: flex;
+}
+
+.social a {
+    margin: 6px;
+}
+
+.social i{
+    color: rgba(18,17,17,0.4);
+    font-size: 14px;
+}
+
+.social a:hover i{
+    color: #17d1ac;
+    transition: all ease 0.5s;
+}
+
+.arrow{
+    align-self: end;
+    width: 50%;
+    height: 15%;
+    margin-bottom: 4em;
+    position: absolute;
+    bottom: 0px;
+    left: -3%;
+    border-right: 1px solid rgba(41,41,41,0.3);
+}
+
+.arrow::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 11px 11px 0px 11px;
+    border-color: #292929 transparent transparent transparent;
+    right: -0.7em;
+    bottom: -2px;
+}
+
+#about{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5% 0px 5%;
+}
+
+.about-text{
+    font-family: calibri;
+    width: 50%;
+}
+
+.about-text h1{
+    font-size: 5rem;
+    color: #17d1ac;
+}
+
+.about-text h2{
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.about-text h1,h2{
+    margin: 0px;
+    padding: 0px;
+}
+
+.about-text p{
+    font-size: 1.2rem;
+    color: rgba(251,251,251,0.90);
+}
+
+.about-text button{
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #17d1ac;
+}
+
+.about-text button:hover{
+    background-color: #ffffff;
+    transition: all ease 0.3s;
+}
+
+#archit{
+    height: 500px;
+}
