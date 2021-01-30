@@ -95,6 +95,7 @@ img {
   width: 100%;
   height: 100%;
   transition: all 0.3s ease;
+  z-index: -1;
 }
 
 .hover-in-shadow:hover:after {
@@ -120,6 +121,7 @@ img {
   border-radius: 30px;
   transition: all 0.3s ease;
   display: inline-block;
+  border: none;
 }
 
 .btn-1::after {
@@ -577,7 +579,7 @@ img {
   opacity: 0.6;
 }
 
-.about-section .about-tabs .tab-item:active {
+.about-section .about-tabs .tab-item.active {
   color: var(--skin-color);
 }
 
@@ -749,6 +751,7 @@ img {
   line-height: 26px;
   margin: 15px 0 0;
 }
+
 /* ABOUT SECTION END */
 
 /* SERVICE SECTION STARTS */
@@ -1291,3 +1294,98 @@ img {
   line-height: 40px;
 }
 /* TESTIMONIAL SECTION END  */
+
+/* CONTACT SECTION STARTS  */
+.contact-section {
+  padding: 80px 0 80px;
+  min-height: 100vh;
+}
+
+.contact-section .contact-item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 0 15px;
+  display: flex;
+}
+
+.contact-section .contact-item-inner {
+  padding: 30px 15px;
+  text-align: center;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.contact-section .contact-item-inner i {
+  font-size: 25px;
+  color: var(--skin-color);
+}
+
+.contact-section .contact-item-inner span {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-black-700);
+  margin: 15px 0 10px;
+  text-transform: capitalize;
+}
+
+.contact-section .contact-item-inner p {
+  font-size: 16px;
+  color: var(--text-black-600);
+  line-height: 26px;
+  margin: 0;
+  word-break: break-word;
+}
+
+.contact-section .contact-form {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-top: 50px;
+}
+
+.contact-section .w-50 {
+  padding: 0 15px;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.contact-section .input-group {
+  margin: 0 0 25px;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+}
+
+.contact-section .input-group::after {
+  border-radius: 30px;
+}
+
+.contact-section .input-group .input-control {
+  height: 45px;
+  display: block;
+  width: 100%;
+  border-radius: 30px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  padding: 0 15px;
+  color: var(--text-black-700);
+}
+
+.contact-section .input-group .input-control::after {
+  border-radius: 30px;
+}
+
+.contact-section .input-group textarea.input-control {
+  height: 184px;
+  padding-top: 15px;
+  resize: none;
+}
+
+.contact-section .submit-btn {
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: right;
+  padding: 0 15px;
+}
+
+/* CONTACT SECTION END  */
