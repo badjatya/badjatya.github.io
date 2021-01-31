@@ -378,6 +378,7 @@ img {
   cursor: pointer;
   border-radius: 50%;
   align-items: center;
+  margin-right: -16%;
   transition: all 0.3s ease;
 }
 

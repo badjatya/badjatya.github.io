@@ -1,9 +1,38 @@
+/* FOR SCREEN WIDTH BELOW 1200PX  */
+@media (max-width: 1201px) {
+  .header .hamburger-btn {
+    margin-right: 0.01%;
+  }
+  .effect-5 {
+    right: 1.5%;
+    top: 38%;
+  }
+}
+
 /* FOR SCREEN WIDTH BELOW 991PX  */
 @media (max-width: 991px) {
   .service-section .service-item,
   .portfolio-section .portfolio-item {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+
+  .home-section .home-text h2 {
+    font-size: 48px;
+  }
+
+  .home-section .home-img .img-box {
+    margin-bottom: 20px;
+    max-width: 350px;
+  }
+
+  .effect-2 {
+    bottom: 10%;
+  }
+
+  .effect-5 {
+    right: 1.5%;
+    top: 38%;
   }
 }
 
@@ -100,15 +129,62 @@
     left: -30px;
     right: auto;
   }
+
+  .about-section .about-info .btn-1 {
+    margin: 30px 20px 0 30%;
+  }
+
+  .about-section .about-info .btn-1:last-child {
+    margin: 0;
+  }
+
+  .about-section .about-img .img-box {
+    width: 65%;
+    border: 10px solid transparent;
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+
+  .portfolio-popup .info {
+    margin-top: 15px;
+  }
 }
 
 /* FOR SCREEN WIDTH BELOW 574PX  */
 @media (max-width: 574px) {
   .home-section .home-img .img-box {
     max-width: 260px;
+    margin-bottom: 40px;
+  }
+
+  .home-section .full-screen {
+    padding: 80px 0;
   }
 
   .home-section .home-text h2 {
     font-size: 40px;
+  }
+
+  about-section .about-img .img-box {
+    width: 74%;
+    margin: 0 auto;
+  }
+
+  .about-section .about-info .btn-1 {
+    margin: 30px 20px 0 20%;
+  }
+}
+
+@media (max-width: 400px) {
+  .effect-4 {
+    left: 5.5%;
+  }
+
+  .home-section .home-img .img-box {
+    margin-bottom: 20px;
+  }
+
+  .about-section .about-info .btn-1 {
+    margin: 30px 20px 0 8%;
   }
 }
