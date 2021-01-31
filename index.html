@@ -7,12 +7,33 @@
 
     <!-- FONT AWESOME  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <!-- STYLE SWITCHER  -->
+    <link rel="stylesheet" href="./resources/css/skins/color-1.css">
 
+    <link rel="stylesheet" class="alternate-style" title="color-1" href="./resources/css/skins/color-1.css">
+    <link rel="stylesheet" class="alternate-style" title="color-2" href="./resources/css/skins/color-2.css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="color-3" href="./resources/css/skins/color-3.css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="color-4" href="./resources/css/skins/color-4.css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="color-5" href="./resources/css/skins/color-5.css" disabled>
     <!-- STYLE  -->
     <link rel="stylesheet" href="./resources/css/style.css">
-    <link rel="stylesheet" href="./resources/css/color-1.css">
+    <link rel="stylesheet" href="./resources/css/style-switcher.css">
+    <link rel="stylesheet" href="./resources/css/responsive.css">
 </head>
 <body>
+
+    <!-- PRELOADER START  -->
+    <div class="preloader">
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- PRELOADER END  -->
+
+
+
     <!-- HEADER START  -->
     <header class="header">
         <div class="container">
@@ -43,11 +64,14 @@
             </ul>
         </div>
         <p class="copyright-text">&copy; 2021 BADJATYA</p>
+
     </nav>
+    <div class="fade-out-effect"></div>
     <!-- NAVIGATION END  -->
+    
 
     <!-- HOME SECTION STARTS  -->
-    <section class="home-section section" id="home">
+    <section class="home-section section active" id="home">
 
         <!-- EFFECT WRAP START  -->
         <div class="effect-wrap">
@@ -111,7 +135,7 @@
                     <p><span>Hi! My name is Archit Badjatya. I am a Web Developer </span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto reiciendis corrupti quidem suscipit provident ut, sequi unde aliquid, ipsum commodi ipsa incidunt totam itaque doloribus enim necessitatibus aperiam atque nemo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi mollitia qui praesentium nemo tenetur dolore iure harum temporibus, aperiam eos, excepturi cumque ea assumenda rem, perferendis voluptate? Sunt, laborum facilis.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam porro maiores consequatur est fugit sequi sint placeat quisquam ad vero voluptate iste veritatis, totam nisi. Ipsam commodi non quos mollitia!</p>
                     <a href="./resources/resume/ArchitBadjatya.pdf" class="btn-1 outer-shadow hover-in-shadow">Download CV</a>
-                    <a href="#" class="link-item btn-1 outer-shadow hover-in-shadow">Hire Me</a>
+                    <a href="#contact" class="link-item btn-1 outer-shadow hover-in-shadow">Hire Me</a>
                 </div>
             </div>
 
@@ -664,26 +688,10 @@
         <div class="pp-details">
             <div class="pp-details-inner">
                 <div class="pp-title">
-                    <h2>personal portfolio</h2>
-                    <p>Category - <span class="pp-project-category">Website</span></p>
+                    <h2></h2>
+                    <p>Category - <span class="pp-project-category"></span></p>
                 </div>
-                <div class="pp-project-details">
-                    <div class="row">
-                        <div class="description">
-                            <h3>Project Brief:</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quibusdam minima laborum, aut illo officia maxime aliquam dolor repudiandae, omnis error, numquam dolore doloremque repellendus laboriosam. Ad esse vero suscipit!</p>
-                        </div>
-                        <div class="info">
-                            <h3>Project Info:</h3>
-                            <ul>
-                                <li>Date - <span>2020</span></li>
-                                <li>Client - <span>xyz</span></li>
-                                <li>Tools - <span>Html,Css,JavaScript</span></li>
-                                <li>Web - <span><a href="#">www.domain.com</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <div class="pp-project-details"></div>
             </div>
         </div>
 
@@ -696,7 +704,7 @@
                 </div>
                 <div class="pp-close outer-shadow hover-in-shadow">&times;</div>
                 <img src="./resources/img/portfolio/large/project-1/1.png" alt="" class="pp-img outer-shadow">
-                <div class="pp-counter">1 of 6</div>
+                <div class="pp-counter"></div>
             </div>
 
             <div class="pp-loader">
@@ -710,10 +718,30 @@
     </div>
     <!-- PORTFOLIO POPUP ENDS  -->
 
+    <!-- STYLE SWITCHER START -->
+    <div class="style-switcher outer-shadow">
+        <div class="style-switcher-toggler s-icon outer-shadow hover-in-shadow">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon outer-shadow hover-in-shadow">
+            <i class="fas"></i>
+        </div>
+        <h4>Theme Colors</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+        </div>
+    </div>
+    <!-- STYLE SWITCHER END -->
+
 
 
 
     <!-- MAIN JS -->
     <script src="./resources/js/script.js"></script>
+    <script src="./resources/js/style-sitcher.js"></script>
 </body>
 </html>
