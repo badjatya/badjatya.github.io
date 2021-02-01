@@ -71,6 +71,10 @@ ul {
   margin: 0;
 }
 
+ul li {
+  text-transform: uppercase;
+}
+
 img {
   vertical-align: middle;
   max-width: 100%;
@@ -498,6 +502,7 @@ img {
   display: block;
   margin-bottom: 20px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .nav-menu ul li:last-child {
@@ -510,7 +515,7 @@ img {
   font-weight: 600;
   color: var(--text-black-600);
   padding: 5px 30px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   border-radius: 30px;
   transition: all 0.3s ease;
 }

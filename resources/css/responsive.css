@@ -1,3 +1,9 @@
+/* FOR SCREEN WIDTH BELOW 1400PX  */
+@media (max-width: 1401px) {
+  .header .hamburger-btn {
+    margin-right: -100px;
+  }
+}
 /* FOR SCREEN WIDTH BELOW 1200PX  */
 @media (max-width: 1201px) {
   .header .hamburger-btn {
