@@ -468,7 +468,7 @@ navigation menu
   font-weight: 600;
   color: var(--text-black-600);
   padding: 5px 30px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   border-radius: 30px;
   transition: all 0.3s ease;
 }
