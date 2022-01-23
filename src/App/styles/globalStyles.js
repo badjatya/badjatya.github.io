@@ -14,6 +14,14 @@ const GlobalStyle = createGlobalStyle`
         line-height: 1.5;
         overflow-x: hidden;
         background: ${(props) => props.theme.color.bg_50};
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .logo {
+        font-family: 'Mea Culpa', cursive;
+        span {
+            font-family: 'MonteCarlo', cursive;
+        }
     }
 
 `;

@@ -15,6 +15,9 @@ function App() {
       <Provider store={store}>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
+          <h1 style={{ color: "#fff", fontSize: "4rem" }} className="logo">
+            B<span>adjatya</span>
+          </h1>
         </ThemeProvider>
       </Provider>
     </>
