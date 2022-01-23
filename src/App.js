@@ -4,10 +4,14 @@ import React from "react";
 import { Provider, useSelector } from "react-redux";
 import store from "./App/redux/store";
 
+// Importing Styles
+import GlobalStyle from "./App/styles/globalStyles";
+
 function App() {
   return (
     <>
       <Provider store={store}>
+        <GlobalStyle />
         <Hello />
       </Provider>
     </>
