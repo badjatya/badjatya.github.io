@@ -52,11 +52,11 @@ const StyledNav = styled.aside`
   padding: 15px;
   padding-top: 25px;
   position: fixed;
-  top: 100px;
-  right: 20px;
+  top: 20px;
+  right: 10px;
+  bottom: 20px;
   border-radius: 5px;
   width: 200px;
-  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
