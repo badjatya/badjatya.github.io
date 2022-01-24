@@ -117,7 +117,7 @@ const StyledSwitcher = styled.div`
   padding: 15px;
   position: fixed;
   top: 100px;
-  right: 88px;
+  right: 28px;
   border-radius: 5px;
   h4 {
     margin-bottom: 10px;
