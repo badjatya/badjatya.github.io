@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 1.5rem;
         overflow-x: hidden;
         background: ${(props) => props.theme.color.bg_50};
         font-family: 'Raleway', sans-serif;
@@ -30,17 +30,17 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .outer-shadow {
-        box-shadow: ${({ theme }) => theme.color.outer_shadow};
+        box-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
     }
     .inner-shadow {
-        box-shadow: ${({ theme }) => theme.color.inner_shadow};
+        box-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636;
     }
     .hover-in-shadow {
         position: relative;
         z-index: 1;
     }
     .hover-in-shadow:hover {
-        box-shadow: ${({ theme }) => theme.color.outer_shadow_0};
+        box-shadow: 0 0 0 #222327, 0 0 0 #363636;
     }
     .hover-in-shadow:after {
         content: "";
@@ -53,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
         z-index: -1;
     }
     .hover-in-shadow:hover:after {
-        box-shadow: ${({ theme }) => theme.color.inner_shadow};
+        box-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636;
     }
 
 `;

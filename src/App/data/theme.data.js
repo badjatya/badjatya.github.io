@@ -1,4 +1,5 @@
 export const colorData = {
+  primary: "#FB839E",
   bg_900: "#ffffff",
   bg_100: "#353535",
   bg_50: "#2b2c2f",
