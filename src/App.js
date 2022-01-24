@@ -2,8 +2,9 @@
 import { Provider } from "react-redux";
 import store from "./App/redux/store";
 
-// Importing Router
+// Importing Components
 import Router from "./App/routes/router";
+import Navbar from "./App/layout/Navbar";
 
 // Importing Styles
 import GlobalStyle from "./App/styles/globalStyles";
@@ -15,6 +16,7 @@ function App() {
       <Provider store={store}>
         <StyledThemeProvider>
           <GlobalStyle />
+          <Navbar />
           <Router />
         </StyledThemeProvider>
       </Provider>
