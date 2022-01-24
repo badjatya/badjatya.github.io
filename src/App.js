@@ -11,7 +11,7 @@ import StyledThemeProvider from "./App/styles/theme";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Provider store={store}>
         <StyledThemeProvider>
           <GlobalStyle />
@@ -21,7 +21,7 @@ function App() {
           <Container />
         </StyledThemeProvider>
       </Provider>
-    </>
+    </div>
   );
 }
 

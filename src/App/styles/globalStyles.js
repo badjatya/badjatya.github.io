@@ -24,6 +24,38 @@ const GlobalStyle = createGlobalStyle`
         }
     }
 
+    .App {
+        width: 1140px;
+        margin: 0 auto;
+    }
+
+    .outer-shadow {
+        box-shadow: ${(theme) => theme.color.outer_shadow};
+    }
+    .inner-shadow {
+        box-shadow: ${(theme) => theme.color.inner_shadow};
+    }
+    .hover-in-shadow {
+        position: relative;
+        z-index: 1;
+    }
+    .hover-in-shadow:hover {
+        box-shadow: ${(theme) => theme.color.outer_shadow_0};
+    }
+    .hover-in-shadow:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s ease;
+        z-index: -1;
+    }
+    .hover-in-shadow:hover:after {
+        box-shadow: ${(theme) => theme.color.inner_shadow};
+    }
+
 `;
 
 export default GlobalStyle;
