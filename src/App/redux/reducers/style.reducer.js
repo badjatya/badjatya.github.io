@@ -1,5 +1,6 @@
 // Data
 import { colorData } from "../../data/theme.data";
+import { navData } from "../../data/nav.data";
 
 // Action types
 import {
@@ -8,6 +9,7 @@ import {
   SET_LIGHT_THEME,
   SET_DARK_THEME,
   SET_PRIMARY_COLOR,
+  SET_NAV_ACTIVE,
 } from "../types/style.types";
 
 const initialState = {
@@ -18,6 +20,7 @@ const initialState = {
     color: colorData,
   },
   primary: "#FB839E",
+  nav: navData,
 };
 
 // Style reducer
@@ -41,6 +44,17 @@ const styleReducer = (state = initialState, { type, payload }) => {
       return { ...state, theme: { mode: "Dark", color: payload } };
     case SET_PRIMARY_COLOR:
       return { ...state, primary: payload };
+    case SET_NAV_ACTIVE:
+      const updatedNav = state.nav.map((item) => {
+        if (item.id === payload) {
+          item.active = true;
+          return item;
+        } else {
+          item.active = false;
+          return item;
+        }
+      });
+      return { ...state, nav: updatedNav };
 
     default:
       return state;

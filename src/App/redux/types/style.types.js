@@ -3,3 +3,4 @@ export const TOGGLE_SETTING = "TOGGLE_SETTING";
 export const SET_DARK_THEME = "SET_DARK_THEME";
 export const SET_LIGHT_THEME = "SET_LIGHT_THEME";
 export const SET_PRIMARY_COLOR = "SET_PRIMARY_COLOR";
+export const SET_NAV_ACTIVE = "SET_NAV_ACTIVE";

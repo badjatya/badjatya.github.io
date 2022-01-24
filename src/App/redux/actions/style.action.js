@@ -5,6 +5,7 @@ import {
   SET_LIGHT_THEME,
   SET_DARK_THEME,
   SET_PRIMARY_COLOR,
+  SET_NAV_ACTIVE,
 } from "../types/style.types";
 
 export const toggleNavigation = () => {
@@ -63,5 +64,12 @@ export const setPrimaryColor = (color) => {
   return {
     type: SET_PRIMARY_COLOR,
     payload: color,
+  };
+};
+
+export const setNavActive = (id) => {
+  return {
+    type: SET_NAV_ACTIVE,
+    payload: id,
   };
 };

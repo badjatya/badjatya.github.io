@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const RoundedButton = ({ children, onClick }) => {
+const RoundedButton = (props) => {
   return (
     <StyledRoundedButton
-      onClick={onClick}
+      {...props}
+      onClick={props.onClick}
       className="outer-shadow hover-in-shadow"
     >
-      {children}
+      {props.children}
     </StyledRoundedButton>
   );
 };
@@ -28,6 +29,11 @@ const StyledRoundedButton = styled.p`
   align-items: center;
   transition: all 0.3s ease;
   margin: 10px;
+
+  &:hover {
+    color: ${(props) =>
+      props.hover ? props.theme.primary : props.theme.color.text_900};
+  }
 
   &:hover:after {
     border-radius: 50%;
