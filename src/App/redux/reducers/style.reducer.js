@@ -4,6 +4,7 @@ import { colorData } from "../../data/theme.data";
 // Action types
 import {
   TOGGLE_NAVIGATION,
+  TOGGLE_SETTING,
   SET_LIGHT_THEME,
   SET_DARK_THEME,
   SET_PRIMARY_COLOR,
@@ -11,6 +12,7 @@ import {
 
 const initialState = {
   showNavigation: false,
+  showSetting: false,
   theme: {
     mode: "Dark",
     color: colorData,
@@ -23,6 +25,8 @@ const styleReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case TOGGLE_NAVIGATION:
       return { ...state, showNavigation: !state.showNavigation };
+    case TOGGLE_SETTING:
+      return { ...state, showSetting: !state.showSetting };
     case SET_LIGHT_THEME:
       return { ...state, theme: { mode: "Light", color: payload } };
     case SET_DARK_THEME:

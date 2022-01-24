@@ -1,6 +1,7 @@
 // Action types
 import {
   TOGGLE_NAVIGATION,
+  TOGGLE_SETTING,
   SET_LIGHT_THEME,
   SET_DARK_THEME,
   SET_PRIMARY_COLOR,
@@ -9,6 +10,12 @@ import {
 export const toggleNavigation = () => {
   return {
     type: TOGGLE_NAVIGATION,
+  };
+};
+
+export const toggleSetting = () => {
+  return {
+    type: TOGGLE_SETTING,
   };
 };
 
