@@ -13,8 +13,8 @@ const initialState = {
   theme: {
     mode: "Dark",
     color: colorData,
-    primary: "#FB839E",
   },
+  primary: "#FB839E",
 };
 
 // Style reducer

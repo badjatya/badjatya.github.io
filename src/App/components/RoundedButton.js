@@ -27,6 +27,7 @@ const StyledRoundedButton = styled.p`
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
+  margin: 10px;
 
   &:hover:after {
     border-radius: 50%;
