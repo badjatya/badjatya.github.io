@@ -37,7 +37,7 @@ const StyledNavbar = styled.nav`
 
 const StyledLogo = styled.p`
   font-size: 3rem;
-  color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.primary};
   font-family: "Mea Culpa", cursive;
 
   span: {
