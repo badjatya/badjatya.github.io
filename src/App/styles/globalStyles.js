@@ -30,17 +30,17 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .outer-shadow {
-        box-shadow: ${(theme) => theme.color.outer_shadow};
+        box-shadow: ${({ theme }) => theme.color.outer_shadow};
     }
     .inner-shadow {
-        box-shadow: ${(theme) => theme.color.inner_shadow};
+        box-shadow: ${({ theme }) => theme.color.inner_shadow};
     }
     .hover-in-shadow {
         position: relative;
         z-index: 1;
     }
     .hover-in-shadow:hover {
-        box-shadow: ${(theme) => theme.color.outer_shadow_0};
+        box-shadow: ${({ theme }) => theme.color.outer_shadow_0};
     }
     .hover-in-shadow:after {
         content: "";
@@ -53,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
         z-index: -1;
     }
     .hover-in-shadow:hover:after {
-        box-shadow: ${(theme) => theme.color.inner_shadow};
+        box-shadow: ${({ theme }) => theme.color.inner_shadow};
     }
 
 `;
