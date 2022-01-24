@@ -24,6 +24,7 @@ const StyledButton = styled.span`
   cursor: pointer;
   padding: 10px 25px;
   text-decoration: none;
+  text-align: center;
 
   &:hover:after {
     border-radius: 30px;

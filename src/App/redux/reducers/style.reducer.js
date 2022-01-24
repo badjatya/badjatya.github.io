@@ -24,9 +24,17 @@ const initialState = {
 const styleReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case TOGGLE_NAVIGATION:
-      return { ...state, showNavigation: !state.showNavigation };
+      return {
+        ...state,
+        showSetting: false,
+        showNavigation: !state.showNavigation,
+      };
     case TOGGLE_SETTING:
-      return { ...state, showSetting: !state.showSetting };
+      return {
+        ...state,
+        showNavigation: false,
+        showSetting: !state.showSetting,
+      };
     case SET_LIGHT_THEME:
       return { ...state, theme: { mode: "Light", color: payload } };
     case SET_DARK_THEME:

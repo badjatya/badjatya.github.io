@@ -15,6 +15,7 @@ import {
 
 // Components
 import RoundedButton from "../components/RoundedButton";
+import Nav from "./Nav";
 
 // Icons / Data
 import { FaBars, FaCog, FaSun, FaMoon, FaTimes } from "react-icons/fa";
@@ -61,6 +62,8 @@ const Navbar = () => {
           </RoundedButton>
         )}
       </StyledRoundedButtonContainer>
+
+      {showNavigation && <Nav />}
 
       {showSetting && (
         <StyledSwitcher className="outer-shadow">
@@ -117,8 +120,9 @@ const StyledSwitcher = styled.div`
   padding: 15px;
   position: fixed;
   top: 100px;
-  right: 28px;
+  right: 20px;
   border-radius: 5px;
+  z-index: 1;
   h4 {
     margin-bottom: 10px;
     font-weight: 600;
