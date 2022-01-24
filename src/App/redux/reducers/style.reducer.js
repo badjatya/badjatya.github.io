@@ -6,6 +6,7 @@ import {
   TOGGLE_NAVIGATION,
   SET_LIGHT_THEME,
   SET_DARK_THEME,
+  SET_PRIMARY_COLOR,
 } from "../types/style.types";
 
 const initialState = {
@@ -26,6 +27,8 @@ const styleReducer = (state = initialState, { type, payload }) => {
       return { ...state, theme: { mode: "Light", color: payload } };
     case SET_DARK_THEME:
       return { ...state, theme: { mode: "Dark", color: payload } };
+    case SET_PRIMARY_COLOR:
+      return { ...state, primary: payload };
 
     default:
       return state;

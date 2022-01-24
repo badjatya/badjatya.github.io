@@ -3,6 +3,7 @@ import {
   TOGGLE_NAVIGATION,
   SET_LIGHT_THEME,
   SET_DARK_THEME,
+  SET_PRIMARY_COLOR,
 } from "../types/style.types";
 
 export const toggleNavigation = () => {
@@ -48,5 +49,12 @@ export const setDarkTheme = () => {
       inner_shadow: "inset 3px 3px 3px #222327, inset -3px -3px 3px #363636",
       inner_shadow_0: "inset 0 0 0 #222327, inset 0 0 0 #363636",
     },
+  };
+};
+
+export const setPrimaryColor = (color) => {
+  return {
+    type: SET_PRIMARY_COLOR,
+    payload: color,
   };
 };
