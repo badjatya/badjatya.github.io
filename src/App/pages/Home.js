@@ -2,16 +2,23 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 // Import Components
 import Button from "../components/Button";
 
-// Assets
+// Assets / Animation
 import profileImg from "../assets/img/profile-pic.png";
+import { pageAnimation } from "../styles/animation";
 
 const Home = () => {
   return (
-    <StyledHomeContainer>
+    <StyledHomeContainer
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <div className="details">
         <p>Hello,</p>
         <h1>I'm Archit Badjatya</h1>
@@ -31,7 +38,7 @@ const Home = () => {
 
 export default Home;
 
-const StyledHomeContainer = styled.div`
+const StyledHomeContainer = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
