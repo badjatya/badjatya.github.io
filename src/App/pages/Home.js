@@ -23,7 +23,7 @@ const Home = () => {
         <p>Hello,</p>
         <h1>I'm Archit Badjatya</h1>
         <h2>Full Stack Web & Mobile Developer</h2>
-        <div>
+        <div className="btn">
           <Button as={Link} to="/about">
             More About Me
           </Button>
@@ -128,6 +128,42 @@ const StyledHomeContainer = styled(motion.div)`
       margin: auto;
       border-radius: 50%;
       padding: 15px 15px 10px 15px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    padding: 50px 20px;
+
+    .details,
+    .home-img {
+      flex: 0 0 50%;
+      max-width: 100%;
+      padding: 0 15px;
+    }
+    .img-box {
+      max-width: 400px;
+    }
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: ${({ theme }) => theme.color.text_900};
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: ${({ theme }) => theme.color.text_600};
+      text-transform: capitalize;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
     }
   }
 `;

@@ -107,6 +107,11 @@ const StyledNavbar = styled.nav`
   align-items: center;
   justify-content: space-between;
   position: relative;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    margin: 10px auto;
+  }
 `;
 
 const StyledLogo = styled(Link)`
