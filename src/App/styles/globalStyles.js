@@ -30,11 +30,9 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .outer-shadow {
-        /* box-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636; */
         box-shadow: ${(props) => props.theme.color.outer_shadow};
     }
     .inner-shadow {
-        /* box-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636; */
         box-shadow: ${(props) => props.theme.color.inner_shadow};
     }
     .hover-in-shadow {
@@ -42,7 +40,6 @@ const GlobalStyle = createGlobalStyle`
         z-index: 1;
     }
     .hover-in-shadow:hover {
-        /* box-shadow: 0 0 0 #222327, 0 0 0 #363636; */
         box-shadow: ${(props) => props.theme.color.outer_shadow_0};
     }
     .hover-in-shadow:after {
@@ -56,9 +53,14 @@ const GlobalStyle = createGlobalStyle`
         z-index: -1;
     }
     .hover-in-shadow:hover:after {
-        /* box-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636; */
         box-shadow: ${(props) => props.theme.color.inner_shadow};
     }
+
+    @media (max-width: 1024px) {
+    .App {
+        width: 968px;
+    }
+  }
 
 `;
 

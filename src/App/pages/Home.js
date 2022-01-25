@@ -101,10 +101,33 @@ const StyledHomeContainer = styled(motion.div)`
   }
 
   @media (max-width: 1024px) {
-    padding: 50px 10px;
+    padding: 100px 30px 80px 30px;
+    width: 968px;
 
+    .details {
+      max-width: 45%;
+    }
     .home-img {
       max-width: 50%;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 24px;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 32px;
+    }
+    .img-box {
+      max-width: 300px;
+      display: block;
+      margin: auto;
+      border-radius: 50%;
+      padding: 15px 15px 10px 15px;
     }
   }
 `;

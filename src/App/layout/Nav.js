@@ -118,4 +118,8 @@ const StyledLink = styled(Link)`
   &:hover:after {
     border-radius: 30px;
   }
+
+  @media (max-width: 1024px) {
+    background: ${(props) => props.theme.color.bg_50};
+  }
 `;
