@@ -23,9 +23,11 @@ const Home = () => {
         <p>Hello,</p>
         <h1>I'm Archit Badjatya</h1>
         <h2>Full Stack Web & Mobile Developer</h2>
-        <Button as={Link} to="/about">
-          More About Me
-        </Button>
+        <div>
+          <Button as={Link} to="/about">
+            More About Me
+          </Button>
+        </div>
       </div>
       <div className="home-img">
         <div className="img-box inner-shadow">

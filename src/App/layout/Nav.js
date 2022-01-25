@@ -13,7 +13,11 @@ import RoundedButton from "../components/RoundedButton";
 
 // Data / Animation
 import { navSocialData } from "../data/nav.data";
-import { sideNavAnimation, fadeAnimation } from "../styles/animation";
+import {
+  sideNavAnimation,
+  fadeAnimation,
+  navSocialDropAnimation,
+} from "../styles/animation";
 
 const Nav = () => {
   // State and dispatch
@@ -30,25 +34,25 @@ const Nav = () => {
       <div className="nav">
         {navData &&
           navData.map((nav) => (
-            <StyledLink
-              variants={fadeAnimation}
-              key={nav.id}
-              to={nav.to}
-              onClick={() => dispatch(setNavActive(nav.id))}
-              active={nav.active}
-              className="outer-shadow hover-in-shadow"
-            >
-              {nav.title}
-            </StyledLink>
+            <motion.div key={nav.id} variants={fadeAnimation}>
+              <StyledLink
+                to={nav.to}
+                onClick={() => dispatch(setNavActive(nav.id))}
+                active={nav.active}
+                className="outer-shadow hover-in-shadow"
+              >
+                {nav.title}
+              </StyledLink>
+            </motion.div>
           ))}
       </div>
 
       <div className="navSocialIcons">
         {navSocialData &&
           navSocialData.map((nav) => (
-            <RoundedButton hover={true} key={nav.id}>
-              {nav.icon}
-            </RoundedButton>
+            <motion.div variants={navSocialDropAnimation} key={nav.id}>
+              <RoundedButton hover={true}>{nav.icon}</RoundedButton>
+            </motion.div>
           ))}
       </div>
     </StyledNav>
@@ -96,7 +100,7 @@ const StyledNav = styled(motion.aside)`
   }
 `;
 
-const StyledLink = styled(motion.Link)`
+const StyledLink = styled(Link)`
   font-size: 1rem;
   background: transparent;
   border-radius: 30px;

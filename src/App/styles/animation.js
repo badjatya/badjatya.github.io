@@ -29,6 +29,7 @@ export const sideNavAnimation = {
     transition: {
       duration: 0.75,
       when: "beforeChildren",
+      staggerChildren: 0.5,
     },
   },
   exit: {
@@ -47,6 +48,22 @@ export const fadeAnimation = {
     opacity: 1,
     transition: {
       duration: 0.75,
+      staggerChildren: 0.25,
+    },
+  },
+};
+
+export const navSocialDropAnimation = {
+  hidden: {
+    y: -200,
+    opacity: 0,
+  },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.75,
+      staggerChildren: 0.25,
     },
   },
 };
