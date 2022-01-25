@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
+import { motion } from "framer-motion";
 
 // Actions
 import { setNavActive } from "../redux/actions/style.action";
@@ -10,15 +11,22 @@ import { setNavActive } from "../redux/actions/style.action";
 // Components
 import RoundedButton from "../components/RoundedButton";
 
-// Data
+// Data / Animation
 import { navSocialData } from "../data/nav.data";
+import { sideNavAnimation } from "../styles/animation";
 
 const Nav = () => {
   // State and dispatch
   const navData = useSelector((state) => state.styles.nav);
   const dispatch = useDispatch();
   return (
-    <StyledNav className="outer-shadow">
+    <StyledNav
+      className="outer-shadow"
+      variants={sideNavAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <div className="nav">
         {navData &&
           navData.map((nav) => (
@@ -48,7 +56,7 @@ const Nav = () => {
 
 export default Nav;
 
-const StyledNav = styled.aside`
+const StyledNav = styled(motion.aside)`
   padding: 15px;
   padding-top: 25px;
   position: fixed;
