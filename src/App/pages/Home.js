@@ -89,4 +89,20 @@ const StyledHomeContainer = styled(motion.div)`
     border-radius: 50%;
     border: 10px solid transparent;
   }
+
+  @media (max-width: 1440px) {
+    padding: 150px 30px;
+
+    .home-img {
+      max-width: 50%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 50px 10px;
+
+    .home-img {
+      max-width: 50%;
+    }
+  }
 `;

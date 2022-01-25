@@ -28,12 +28,25 @@ export const sideNavAnimation = {
     x: 0,
     transition: {
       duration: 0.75,
+      when: "beforeChildren",
     },
   },
   exit: {
     x: 320,
     transition: {
-      duration: 2,
+      duration: 0.75,
+    },
+  },
+};
+
+export const fadeAnimation = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 0.75,
     },
   },
 };

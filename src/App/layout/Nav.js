@@ -13,7 +13,7 @@ import RoundedButton from "../components/RoundedButton";
 
 // Data / Animation
 import { navSocialData } from "../data/nav.data";
-import { sideNavAnimation } from "../styles/animation";
+import { sideNavAnimation, fadeAnimation } from "../styles/animation";
 
 const Nav = () => {
   // State and dispatch
@@ -31,6 +31,7 @@ const Nav = () => {
         {navData &&
           navData.map((nav) => (
             <StyledLink
+              variants={fadeAnimation}
               key={nav.id}
               to={nav.to}
               onClick={() => dispatch(setNavActive(nav.id))}
@@ -87,9 +88,15 @@ const StyledNav = styled(motion.aside)`
     align-items: center;
     justify-content: space-between;
   }
+
+  @media (max-width: 1440px) {
+    top: 90px;
+    right: 10px;
+    bottom: 50px;
+  }
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(motion.Link)`
   font-size: 1rem;
   background: transparent;
   border-radius: 30px;

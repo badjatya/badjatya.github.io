@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
+import { motion, AnimatePresence } from "framer-motion";
 
 // Actions
 import {
@@ -17,9 +18,10 @@ import {
 import RoundedButton from "../components/RoundedButton";
 import Nav from "./Nav";
 
-// Icons / Data
+// Icons / Data / Animation
 import { FaBars, FaCog, FaSun, FaMoon, FaTimes } from "react-icons/fa";
 import { primaryColorData } from "../data/theme.data";
+import { sideNavAnimation } from "../styles/animation";
 
 const Navbar = () => {
   // State
@@ -63,23 +65,31 @@ const Navbar = () => {
         )}
       </StyledRoundedButtonContainer>
 
-      {showNavigation && <Nav />}
+      <AnimatePresence>{showNavigation && <Nav />}</AnimatePresence>
 
-      {showSetting && (
-        <StyledSwitcher className="outer-shadow">
-          <h4>Theme Colors</h4>
+      <AnimatePresence>
+        {showSetting && (
+          <StyledSwitcher
+            variants={sideNavAnimation}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            className="outer-shadow"
+          >
+            <h4>Theme Colors</h4>
 
-          <div className="card-container">
-            {primaryColorData.map(({ id, color }) => (
-              <StyledCard
-                onClick={() => dispatch(setPrimaryColor(color))}
-                key={id}
-                color={color}
-              />
-            ))}
-          </div>
-        </StyledSwitcher>
-      )}
+            <div className="card-container">
+              {primaryColorData.map(({ id, color }) => (
+                <StyledCard
+                  onClick={() => dispatch(setPrimaryColor(color))}
+                  key={id}
+                  color={color}
+                />
+              ))}
+            </div>
+          </StyledSwitcher>
+        )}
+      </AnimatePresence>
     </StyledNavbar>
   );
 };
@@ -116,7 +126,7 @@ const StyledRoundedButtonContainer = styled.div`
   justify-content: space-between;
 `;
 
-const StyledSwitcher = styled.div`
+const StyledSwitcher = styled(motion.div)`
   padding: 15px;
   position: fixed;
   top: 100px;
